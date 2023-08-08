@@ -12,7 +12,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeerProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -23,37 +23,53 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ka5-uZ-aW6">
-                                <rect key="frame" x="16.000000000000004" y="430" width="41.333333333333343" height="20"/>
+                                <rect key="frame" x="16" y="440" width="361" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ax4-QM-CYP">
-                                <rect key="frame" x="16.000000000000004" y="460" width="41.333333333333343" height="20"/>
+                                <rect key="frame" x="16.000000000000004" y="480" width="41.333333333333343" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYt-B3-Wjx">
-                                <rect key="frame" x="16" y="490" width="361" height="20.333333333333314"/>
+                                <rect key="frame" x="16" y="530" width="361" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="hsI-Hp-Rta"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwi-be-O8t">
+                                <rect key="frame" x="56" y="730" width="281" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ROC-fH-jYZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="06p-er-05x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1dX-7a-bJe"/>
+                            <constraint firstItem="nwi-be-O8t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="1gY-du-dXA"/>
                             <constraint firstItem="Ax4-QM-CYP" firstAttribute="leading" secondItem="06p-er-05x" secondAttribute="leading" id="2X0-ae-Q6j"/>
-                            <constraint firstItem="Ax4-QM-CYP" firstAttribute="top" secondItem="Ka5-uZ-aW6" secondAttribute="bottom" constant="10" id="AZ4-xK-slI"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="nwi-be-O8t" secondAttribute="bottom" constant="30" id="47k-Zb-rVh"/>
+                            <constraint firstItem="Ax4-QM-CYP" firstAttribute="top" secondItem="Ka5-uZ-aW6" secondAttribute="bottom" constant="20" id="AZ4-xK-slI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="06p-er-05x" secondAttribute="trailing" constant="16" id="GsS-dV-ghh"/>
                             <constraint firstItem="Ka5-uZ-aW6" firstAttribute="leading" secondItem="06p-er-05x" secondAttribute="leading" id="Im5-pE-jhw"/>
+                            <constraint firstItem="nwi-be-O8t" firstAttribute="top" secondItem="AYt-B3-Wjx" secondAttribute="bottom" constant="20" id="MWo-vF-OCg"/>
                             <constraint firstItem="06p-er-05x" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="3:8" id="Poh-oe-WHK"/>
                             <constraint firstItem="AYt-B3-Wjx" firstAttribute="trailing" secondItem="06p-er-05x" secondAttribute="trailing" id="RPj-5I-V9a"/>
-                            <constraint firstItem="Ka5-uZ-aW6" firstAttribute="top" secondItem="06p-er-05x" secondAttribute="bottom" constant="10" id="Rta-6U-7yL"/>
-                            <constraint firstItem="AYt-B3-Wjx" firstAttribute="top" secondItem="Ax4-QM-CYP" secondAttribute="bottom" constant="10" id="XqW-7W-6RC"/>
+                            <constraint firstItem="Ka5-uZ-aW6" firstAttribute="top" secondItem="06p-er-05x" secondAttribute="bottom" constant="20" id="Rta-6U-7yL"/>
+                            <constraint firstItem="AYt-B3-Wjx" firstAttribute="top" secondItem="Ax4-QM-CYP" secondAttribute="bottom" constant="30" id="XqW-7W-6RC"/>
+                            <constraint firstItem="Ka5-uZ-aW6" firstAttribute="trailing" secondItem="06p-er-05x" secondAttribute="trailing" id="cS6-BM-7rf"/>
                             <constraint firstItem="AYt-B3-Wjx" firstAttribute="leading" secondItem="06p-er-05x" secondAttribute="leading" id="eK2-Kv-un7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nwi-be-O8t" secondAttribute="trailing" constant="40" id="gbZ-uc-smQ"/>
                             <constraint firstItem="06p-er-05x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="phK-lb-EDT"/>
                         </constraints>
                     </view>
@@ -62,6 +78,7 @@
                         <outlet property="beerFirstLabel" destination="Ax4-QM-CYP" id="o9n-wB-OdM"/>
                         <outlet property="beerImage" destination="06p-er-05x" id="WHN-mZ-Qki"/>
                         <outlet property="beerNameLabel" destination="Ka5-uZ-aW6" id="Dbm-1d-c5b"/>
+                        <outlet property="resetButton" destination="nwi-be-O8t" id="U9t-Bh-lYK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -18,18 +18,23 @@ struct Beer {
 }
 
 
+
 class ViewController: UIViewController {
     
     @IBOutlet var beerImage: UIImageView!
     @IBOutlet var beerNameLabel: UILabel!
     @IBOutlet var beerFirstLabel: UILabel!
     @IBOutlet var beerDescription: UILabel!
+    @IBOutlet var resetButton: UIButton!
+    
     
     var beerList: [Beer] = []
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         callRequest()
         setUI()
     }
@@ -66,11 +71,23 @@ class ViewController: UIViewController {
                         print(error)
                     }
                 }
-                
             }
+    
     func setUI() {
         beerDescription.numberOfLines = 0
-    }
-    }
+        beerNameLabel.textAlignment = .center
+        beerDescription.textAlignment = .center
+        resetButton.tintColor = .cyan
+        resetButton.setImage(UIImage(systemName: "arrow.clockwise"), for: .normal)
+        resetButton.setTitle("다른 맥주 추천받기", for: .normal)
+        
+        }
     
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        callRequest()
+    }
+}
+    
+    
+
 
