@@ -35,3 +35,14 @@ enum BeerAPI {
     
     
 }
+
+enum BeerError: Int, Error, LocalizedError {
+    case unauthorized = 401
+    case permissoinDenied = 403
+    case invalidServer = 500
+    case missingParameter = 400
+    
+    var errorDescription: String {
+        switch sel
+    }
+}
